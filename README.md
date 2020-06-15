@@ -3,13 +3,6 @@ Assignment 3: Gomoku with Monte Carlo Tree Search
 
 Your task is to implement MCTS for playing Gomoku. The base game engine is from [here](https://github.com/HackerSir/PygameTutorials/tree/master/Lesson04/Gomoku). 
 
-Again, DO NOT publicly fork this repositiory. 
-
-Due date
------
-May-24 5pm. Only submit the `ai.py` file on Gradescope. 
-
-
 The Game
 -----
 Gomoku is a popular game played on the Go board, following much simpler rules. 
@@ -29,12 +22,3 @@ In MCTS, the search exits when the "computation budget" is reached (Line 20 in `
 
 It is easy to see that good moves should be pretty close to the pieces already on the board. Thus, to accelerate search, we have limited the search to a small "active" area around existing pieces (this area uses black lines on the board, compared to grey lines in the inactive area). 
 
-Tests
------
-- `python main.py -t 1` runs tests for the winning rate table in several predefined states. Note that a budget of 1000 runs and parameter c=1 in the `best_child` function is used in the test cases. Note that the order in the table is important; make sure to follow the instructions in the `ai.py` starter code. 
-- `python main.py -t 2` runs your AI against a random policy. Your AI should always win (you can try smaller budgets too). 
-
-Note
-------
-- Make sure to start early. This PA requires more work than previous assignments. 
-- Check this [survey article](http://www.incompleteideas.net/609%20dropbox/other%20readings%20and%20resources/MCTS-survey.pdf) for more info on MCTS. 
